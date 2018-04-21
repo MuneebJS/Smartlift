@@ -7,8 +7,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.3.1",
-    "react-native": "0.55.2"
+    "link": "^0.1.5",
+    "react": "^16.3.1",
+    "react-native": "0.55.2",
+    "react-native-splash": "0.0.4",
+    "react-native-splash-screen": "^3.0.6",
+    "yarn": "^1.6.0"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",

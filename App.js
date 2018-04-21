@@ -1,17 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  StatusBar,
+  ImageBackground
 } from 'react-native';
-import Home from './App/Containers/Home';
+
+import SplashScreen from 'react-native-splash-screen';
+import RegForm from './App/Component/regform';
+import Home from './App/Component/regform';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -19,10 +19,16 @@ const instructions = Platform.select({
 });
 
 class App extends Component {
+componentDidMount(){
+  SplashScreen.hide();
+}
+
+
   render() {
     return <View style={styles.container}>
-      <Text>Hello world</Text>
-    </View>
+     
+      <RegForm />
+    </View >
   }
 }
 
@@ -31,9 +37,13 @@ export default App;
 
 const styles = StyleSheet.create({
   container: {
+
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  }
+    backgroundColor: '#66B5FF',
+    paddingLeft: 60,
+    paddingRight: 60,
+
+  },
+
 });
