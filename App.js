@@ -7,10 +7,14 @@ import {
   StatusBar,
   ImageBackground
 } from 'react-native';
+import {
+  StackNavigator,
+} from 'react-navigation';
 
 import SplashScreen from 'react-native-splash-screen';
+import Home from './App/Component/Home';
 import RegForm from './App/Component/regform';
-import Home from './App/Component/regform';
+// import Home from './App/Component/Home';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -18,16 +22,26 @@ const instructions = Platform.select({
   android: 'A project by Jawwad, Muneeb and Arsalan Ahmed',
 });
 
-class App extends Component {
-componentDidMount(){
-  SplashScreen.hide();
-}
 
+console.disableYellowBox = true;
+
+const PrimaryNav = StackNavigator({
+  Home: { screen: Home }, 
+  RegForm: { screen: RegForm },
+  sg: {screen:RegForm},
+
+  // About: {screen: }
+});
+
+class App extends Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
 
   render() {
     return <View style={styles.container}>
-     
-      <RegForm />
+      {/* <RegForm /> */}
+      <PrimaryNav />
     </View >
   }
 }
@@ -41,8 +55,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#66B5FF',
-    paddingLeft: 60,
-    paddingRight: 60,
+    // paddingLeft: 60,
+    // paddingRight: 60,
 
   },
 
