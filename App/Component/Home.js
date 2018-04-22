@@ -32,10 +32,11 @@ export default class Home extends Component {
     return <View style={style.Home}>
 
 <View style={style.msg}>
+<TouchableOpacity onPress={() => this.props.navigation.navigate('SignIn')} style={style.btnSI}>
+        <Text>SignIn</Text>
+      </TouchableOpacity>
    
-   <Image source={require('./sg.png')} style={style.sg}  onPress={() => this.props.navigation.navigate('RegForm')}/>
-  
-         </View> 
+            </View> 
          
 <View>
 
@@ -61,12 +62,7 @@ export default class Home extends Component {
 
 
 const style = StyleSheet.create({
-  Home: {
-    // alignself: 'stretch',
-
-
-  },
-
+ 
   header: {
     fontSize: 24,
     color: '#fff',
@@ -128,20 +124,19 @@ sg:{
   marginLeft:195
 },
 
-msg:{
- // width:2,
-  // height:50,
-  marginTop:10,
-  
-},
-
 Home:{
-  backgroundColor: '#5F084B',
+  backgroundColor: '#CC9999',
   borderBottomWidth: 1,
+  marginTop:41
 
 },
 
-
+btnSI:{
+  marginTop:10,
+  marginLeft:310,
+  width:null,
+  height:null
+}
 
 
 

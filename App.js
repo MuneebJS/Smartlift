@@ -14,6 +14,7 @@ import {
 import SplashScreen from 'react-native-splash-screen';
 import Home from './App/Component/Home';
 import RegForm from './App/Component/regform';
+import SignIn from './App/Component/SignIn';
 // import Home from './App/Component/Home';
 
 const instructions = Platform.select({
@@ -25,11 +26,12 @@ const instructions = Platform.select({
 
 console.disableYellowBox = true;
 
+
 const PrimaryNav = StackNavigator({
   Home: { screen: Home }, 
   RegForm: { screen: RegForm },
-  sg: {screen:RegForm},
-
+  SignIn: {screen:SignIn},
+  //sg: {screen:RegForm},
   // About: {screen: }
 });
 
